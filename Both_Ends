@@ -1,0 +1,19 @@
+# B. both_ends
+ # Given a string s, return a string made of the first 2
+ # and the last 2 chars of the original string,
+ # so 'spring' yields 'spng'. However, if the string length
+ # is less than 2, return instead the empty string.
+
+import sys 
+
+def main():
+  if len(sys.argv[1]) >= 3:
+    vString = sys.argv[1]
+    print (vString[:2] + vString[-2:])
+  else:
+    vString = 'OH GOD TOO SMALL'
+    print (vString)
+
+# This is the standard boilerplate that calls the main() function.
+if __name__ == '__main__':
+  main()
