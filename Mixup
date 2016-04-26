@@ -1,0 +1,25 @@
+# D. MixUp
+ # Given strings a and b, return a single string with a and b separated
+ # by a space '<a> <b>', except swap the first 2 chars of each string.
+ # e.g.
+ #   'mix', pod' -> 'pox mid'
+ #   'dog', 'dinner' -> 'dig donner'
+ # Assume a and b are length 2 or more.
+
+import sys 
+
+def main():
+  if len(sys.argv[1]) >= 0:
+    vString1 = sys.argv[1]
+    vString2 = sys.argv[2]
+    vString3 = vString2[0:2]+vString1[2:]
+    vString4 = vString1[0:2]+vString2[2:]
+    print (vString3, vString4)
+    
+  else:
+    vString = 'OH GOD TOO SMALL'
+    print (vString)
+
+# This is the standard boilerplate that calls the main() function.
+if __name__ == '__main__':
+  main()
