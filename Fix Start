@@ -1,0 +1,26 @@
+ # C. fix_start
+ # Given a string s, return a string
+ # where all occurences of its first char have
+ # been changed to '*', except do not change
+ # the first char itself.
+ # e.g. 'babble' yields 'ba**le'
+ # Assume that the string is length 1 or more.
+ # Hint: s.replace(stra, strb) returns a version of string s
+ # where all instances of stra have been replaced by strb.
+
+import sys 
+
+def main():
+  if len(sys.argv[1]) >= 0:
+    vString = sys.argv[1]
+    vLetter = vString[0:1]
+    vString2 = vString.replace(vLetter, '*')
+    print (vLetter+vString2[1:])
+    
+  else:
+    vString = 'OH GOD TOO SMALL'
+    print (vString)
+
+# This is the standard boilerplate that calls the main() function.
+if __name__ == '__main__':
+  main()
